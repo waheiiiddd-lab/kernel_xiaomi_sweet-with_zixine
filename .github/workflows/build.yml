@@ -203,37 +203,9 @@ jobs:
       - name: "[PACKAGE] :: ANYKERNEL3_ZIP"
         run: |
           mkdir -p release_zips
-          git clone -q https://github.com/RapliVx/AnyKernel3.git -b sweet AnyKernel3
+          git clone -q https://github.com/waheiiiddd-lab/anykernel
           
-          # Create Banner once
-          cat > AnyKernel3/banner << 'EOF'
-           SORY                                  
-           QXQVYXY                               
-           SNRXWYXZ                        RNKJOY          
-            YXYYYYYYXY                  PLOSUYXYOXNJCV          
-              YXY YXYXSRV            VTV LZUKGLDDWPARAS          
-                YXYYYVUUUYY        QEAAAIXPNOJCEDLTAQAR          
-                  YYYVUVT YXY     WLFPSNGPNKTLJNAUIXCHV          
-                    YWQYUPTSJISPLSQAAEPHGFWGLEAJPMLM              
-                      TQR RPKJHFPIVQQLYMCFTBIAJYPPNP              
-                        RNTSFMGHPMAAAAKUFJURFL VRXNT              
-                          WUONRTOAFGQRMLTKMOOPWWTPUVQRW          
-                            XWXWOAAANOLTTMJVTMWZXXYSVTU VTV      
-                              PMXPVWRSUSXSSSYOTVSUYURSXYTYSY      
-                              LVNTOWJCPNUMUSWMSILQYXXYZXVSXWX    
-                              QLPQGJMYNJXPSSMWSVPOKRZXYY YWXTW   
-                                  WUW QHSLTUVQPJNRSO YZZVTYTXU   
-                                      UIKJUOMTOSULKR ZYYUXTYVW   
-                                      VTMTPGSJ        XVUYVYZ   
-                                      VYTRULUM        ZYWVWXZ   
-                                      WUVXSROP          YWWY    
-                                       YTQZLNR                  
-                                       PURTWU                   
-                                       SOXXTU                   
-                                        TQOSU                   
-                                        YXXWX                   
-          
-           FranxxCORE // MAMBOSU PROTOCOL
+          FranxxCORE // MAMBOSU PROTOCOL
            BY RapliVX
           EOF
           # Process all variants in loop
@@ -254,8 +226,8 @@ jobs:
       - name: "[RELEASE] :: GITHUB_RELEASE"
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: "EVA-${{ github.run_number }}"
-          name: "ProjectEVA: MAMBOSU [Run ${{ github.run_number }}]"
+          tag_name: "ZIX-${{ github.run_number }}"
+          name: "ZIXINE-Sweet: MAMBOSU [Run ${{ github.run_number }}]"
           files: release_zips/*.zip
           body: |
             ### ⚠️ NERV SECURITY CLEARANCE REQUIRED
